@@ -1,6 +1,8 @@
 import './App.css';
 import { Routes, Route, NavLink as Link } from "react-router-dom"
 import Dashboard from './Dashboard';
+import Income from './pages/Income';
+import Expense from './pages/Expense';
 
 function App() {
   return (
@@ -11,10 +13,10 @@ function App() {
                 <Link to="/" activeClassName="active">Home</Link>
               </li>
               <li>
-                <Link to="dashboard" activeClassName="active">Dashboard</Link>
+                <Link to="income" activeClassName="active">Income</Link>
               </li>
               <li>
-                <Link to="about" activeClassName="active">About</Link>
+                <Link to="expense" activeClassName="active">Expense</Link>
               </li>
             </ul>
       </nav>
@@ -22,8 +24,8 @@ function App() {
             {/* Define all the routes */}
             <Routes>
               <Route path="/" element={<Dashboard/>}></Route>
-              {/* <Route path="about" element={<About />}></Route>
-              <Route path="*" element={<NotFound />}></Route> */}
+              <Route path="/income" element={<Income />}></Route>
+              <Route path="/expense" element={<Expense />}></Route>
             </Routes>
           </div>
       </div>
